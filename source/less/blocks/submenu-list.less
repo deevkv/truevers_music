@@ -1,0 +1,49 @@
+.submenu-list {
+  margin: 0;
+  padding: 5px;
+  display: block;
+  position: absolute;
+  width: 140px;
+  top: 115px;
+  left: 380px;
+  background-color: #ffffff;
+  border: 2px solid #ededf4;
+  border-radius: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, margin-top 0.3s, visibility 0s linear 0.3s;
+  
+}   
+
+.submenu-list::after {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 62px; top: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid #ffffff; /* Добавляем треугольник */
+}
+
+.submenu-list::before {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: 57px; top: -28px; /* Положение треугольника */
+  border: 14px solid transparent; /* Прозрачные границы */
+  border-bottom: 14px solid #ededf4; /* Добавляем треугольник */
+}
+
+.submenu-list__item {
+	display: block;
+
+}
+
+.submenu-list  .submenu-list__item a  {
+  padding: 10px;
+  color: #3E4348;
+  text-decoration: none; 
+}
+
+
+.submenu-list__item--active a {
+  color: green;
+}

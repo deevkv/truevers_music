@@ -1,0 +1,64 @@
+.albums-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+
+.albums-item {
+	
+	padding: 12px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 7px solid #C72E45;
+	background-color: #3E4348;
+}
+
+.albums-item a {
+	text-decoration: none;
+	color: #ffffff;
+	border: none;
+	line-height: normal;
+}
+
+
+@media (min-width: @tablet-width) {
+	.albums-item {
+    height:136px;
+    padding: 0;
+    margin-bottom: 20px;
+    background:#EFEFEF;
+    border: none;
+	}
+
+.albums-item a {
+    position: relative;
+    float: left;
+    background: gray;
+    width: 200px;
+    height:100%;
+	}
+
+.albums-item a span {
+    width: 136px; /* same as height of .rotateObj */
+    -webkit-transform-origin:63px 73px;
+    display:inline-block;
+    -webkit-transform:rotate(-90deg);
+    text-align:center;
+	}
+
+ .albums-item a {
+    background: #3E4348;
+	}
+
+.album-item__cover  {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+    float: right;
+    width: 136px;
+    height: 100%;
+    background: #C72E45;
+	}
+}
