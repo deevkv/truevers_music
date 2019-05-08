@@ -110,36 +110,32 @@
 			</div>	
 		</footer>
 
-		 <section class="modal modal-subscribe">
-        <h2>Subscribe to news</h2>
-        <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
-        <form class="modal__subscribe-form" action="" method="post">
-            <p>
-              <label class="visually-hidden" for="user-login">First name</label>
-              <input type="text" required>
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-password">Last name</label>
-              <input type="text">
-            </p>
-
-            <p>
-              <label class="visually-hidden" for="user-login">E-mail</label>
-              <input type="email" required name="e-mail">
-            </p>
-            <p class="modal__login-help">
-                <label class="modal__login-checkbox">
-                    <input type="checkbox" name="remember" class="visually-hidden">
-                    <span class="modal__checkbox-indicator"></span>
-                    Remember me
-                </label>
-                <a class="modal__restore" href="#">I forgot password!</a>
-            </p>
-            <button class="button" type="submit">log in</button>
-        </form>
-        <button class="modal__close" type="button">Close</button>
+	  <section class="modal modal-subscribe">
+      <h2>Subscribe to news</h2>
+      <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
+      <form class="modal__subscribe-form" action="" method="post">
+        <p>
+          <label class="modal__input-title indicates" for="First-name">First name</label>
+          <input type="text" required>
+        </p>
+        <p>
+          <label class="modal__input-title" for="Last-name">Last name</label>
+          <input type="text">
+    
+        <p>
+          <label class="modal__input-title indicates" for="user-email">E-mail</label>
+          <input type="email" required name="e-mail">
+        </p>
+        <p class="modal__indicates">indicates required</p>
+        <button class="button button-subscribe" type="submit">Subscribe</button>
+      </form>
+      <button class="modal__close" type="button">Close</button>
     </section>
 
+    <div class="modal__overlay"></div>
+
 		<script src="js/main-nav.js"></script>
+		<script src="js/subscribe.js"></script>
+		
 </body>
 </html>
