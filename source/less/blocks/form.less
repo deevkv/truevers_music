@@ -1,3 +1,47 @@
 .form__input-title {
 	font-weight: normal;
 }
+
+.form__checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.form__checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #3e4348;
+}  
+
+
+.form__checkbox :hover,
+.form__checkbox :focus {
+    color: #FF7777;
+}
+
+.form__checkbox  input[type="checkbox"]:checked + .form__checkbox-indicator::before, 
+.form__checkbox  input[type="checkbox"]:checked + .form__checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    background-color: #C72E45;
+}
+
+.form__checkbox  input[type="checkbox"]:checked + .form__checkbox-indicator::before {
+    transform: rotate(70deg);
+    top: 10px;
+    left: 0px;
+    width: 8px;
+    height: 2px;
+}
+
+.form__checkbox  input[type="checkbox"]:checked + .form__checkbox-indicator::after {
+    transform: rotate(-45deg);
+    top: 8px;
+    left: 3px;
+    width: 14px;
+    height: 2px;
+}

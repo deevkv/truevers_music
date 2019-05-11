@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Truevers Music</title>
+	<title>Truevers About Me</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
 </head>
@@ -18,11 +18,11 @@
 					<button class="main-nav__toggle" type="button"><span class="visually-hidden">Open menu</span></button>
 					<div class="main-nav__wrapper">
 						<ul class="main-nav__list site-list">
-							<li class="site-list__item site-list__item--active">
-								<a>Home</a>
-							</li>
 							<li class="site-list__item">
-								<a href="about.html">About me</a>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="site-list__item site-list__item--active">
+								<a>About me</a>
 							</li>
 							<li class="site-list__item">
 								<a>Albums +</a>
@@ -75,13 +75,19 @@
 				<aside class="page-main__left-panel">
 					<div class="page-main__left-panel--element"></div>
 				</aside>
-				<section class="page-main__content">
-					<h1 class="page-main__title">Hello!<br>I am Truevers.<br> I make music.</h1>
-					<picture class="page-main__img">
-						<source media="(min-width: 1200px)" srcset="img/truevers-dekstop.png">
-						<source media="(min-width: 768px)" srcset="img/truevers-laptop.png">
-						<img src="img/truevers-mobile.png" width="528" height="748" alt="" >
-					</picture>
+				<section class="page-main__contacts">
+					<h1 class="page-main__title--contacts">About me</h1>
+					<p class="page-main__description--contacts">If you want to collaborate or simply just say hello,<br> don't hesitate to reach out!</p>
+					<ul class="page-main__contacts-list">
+						<li>
+							<span>E-mail:</span>
+							truevers.music@protonmail.com
+						</li>
+					</ul>
+				</section>
+				<section class="page-main__img-contacts">
+					<img src="img/about-me.jpg" alt="Truevers Foto" width="338px" height="436px">	
+				</section>
 				</section>
 				<section class="page-main__albums">
 					<h2 class="visually-hidden">Albums list</h2>
@@ -140,6 +146,6 @@
 
 		<script src="js/main-nav.js"></script>
 		<script src="js/subscribe.js"></script>
-		
+
 </body>
 </html>

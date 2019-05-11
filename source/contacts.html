@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Truevers Music</title>
+	<title>Сontacts</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
 </head>
@@ -25,7 +25,12 @@
 								<a href="about.html">About me</a>
 							</li>
 							<li class="site-list__item">
-								<a href="about.html">Albums +</a>
+								<a>Albums +</a>
+								<ul class="submenu-list">
+            			<li class="submenu-list__item"><a href="album-will.html">Will</a></li>
+           				<li class="submenu-list__item"><a href="album-dubs.html">Dubs</a></li>
+            			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
+        				</ul>
 							</li>
 							<li class="site-list__item site-list__item--active">
 								<a>Contacts</a>
@@ -70,22 +75,22 @@
 				<aside class="page-main__left-panel">
 					<div class="page-main__left-panel--element"></div>
 				</aside>
-				<section class="page-main__contacts contacts">
-					<h1 class="page-main__title contacts__title">Contacts</h1>
-					<p class="page-main__description">If you want to collaborate or simply just say hello, don't hesitate to reach out!</p>
+				<section class="page-main__contacts">
+					<h1 class="page-main__title--contacts">Contacts</h1>
+					<p class="page-main__description--contacts">If you want to collaborate or simply just say hello,<br> don't hesitate to reach out!</p>
 					<ul class="page-main__contacts-list">
 						<li>
-							<span>E-mail</span>
+							<span>E-mail:</span>
 							truevers.music@protonmail.com
 						</li>
 					</ul>
 				</section>
 				<section class="page-main__form form">
 						<form action="textarea1.php" method="post">
-	    				<b class="form__input-title">Leave a message</b>
+	    				<b class="form__input-title indicates">Leave a message</b>
 	   				 	<textarea class="indicates" rows="10" cols="45" name="text"></textarea>
 	   				 	<p>
-	           	 	<label for="First-name indicates">First name</label>
+	           	 	<label class="indicates" for="First-name indicates">First name</label>
 	            	<input type="text" required>
 							</p>
 							<p>
@@ -93,36 +98,35 @@
 	            	<input type="text">
 							</p>
 							<p>
-	            	<label class="form__input-title" for="user-email">E-mail</label>
+	            	<label class="form__input-title indicates" for="user-email">E-mail</label>
 	            	<input type="email" required name="e-mail">
 							</p>
 	            <p class="modal__login-help">
-	              <label class="modal__login-checkbox">
+	              <label class="form__checkbox">
 	                  <input type="checkbox" name="remember" class="visually-hidden">
-	                  <span class="modal__checkbox-indicator"></span>
+	                  <span class="form__checkbox-indicator"></span>
 	                  Subscribe to news
 	              </label>
 	            </p>
-	    				<p><input class="button" type="submit" value="Send a message"></p>
+	    				<p><input class="button button-contacts" type="submit" value="Send a message"></p>
 	  				</form>
 				</section>
 				</section>
 				<section class="page-main__albums">
 					<h2 class="visually-hidden">Albums list</h2>
 					<ul class="albums-list">
-
 						<li class="albums-item">
-        				<a href="#"><span>Long</span>
+        				<a href="album-will.html"><span>Will</span>
         				<div class="album-item__cover"></div>
         				</a>
 						</li>
 						<li class="albums-item">
-        				<a href="#"><span>Long</span>
+        				<a href="album-dubs.html"><span>Dubs</span>
         				<div class="album-item__cover"></div>
         				</a>
 						</li>
 						<li class="albums-item">
-        				<a href="album-matrix.html"><span>Long</span>
+        				<a href="album-matrix.html"><span>Matrix</span>
         				<div class="album-item__cover"></div>
         				</a>
 						</li>
