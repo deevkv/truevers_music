@@ -1,17 +1,31 @@
 .modal-subscribe {
-	top: 120px;
   left: 50%;
   width: 400px;
-  margin-left: -300px;
+  margin-left: -160px;
   box-sizing: border-box;
-  padding: 68px 90px;
+  padding: 50px 5px;
   
 }
 
 .modal-subscribe input[type='text'],
 .modal-subscribe input[type='email'] {
-	padding: 8px 10px;
-	width: 341px;
+	padding: 10px 10px;
+	width: 265px;
 	border: 2px solid #3E4348;
-	font-size: 25px;
+	font-size: 20px;
+}
+
+@media (min-width: @desktop-width) {
+	.modal-subscribe { 
+		top: 120px;
+		margin-left: -300px;
+		padding: 68px 90px;
+	}	
+
+	.modal-subscribe input[type='text'],
+	.modal-subscribe input[type='email'] {
+		padding: 8px 10px;
+		width: 341px;
+		font-size: 25px;
+	}
 }

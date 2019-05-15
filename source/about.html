@@ -11,7 +11,7 @@
 		<header class="page-header">
 			<div class="page-header__wrapper">
 				<div class="page-header__block"></div>
-				<a class="page-header__logo">
+				<a href="index.html" class="page-header__logo">
 					<img class="page-header__logo-image" width="65" height="65" src="img/logotype-truevers.svg" alt="Logo truevers music">
 				</a>	
 				<nav class="main-nav main-nav--closed main-nav--nojs">
@@ -24,9 +24,9 @@
 							<li class="site-list__item site-list__item--active">
 								<a>About me</a>
 							</li>
-							<li class="site-list__item">
+							<li class="site-list__item site-list__album">
 								<a>Albums +</a>
-								<ul class="submenu-list">
+								<ul class="submenu-list submenu-list__closed">
             			<li class="submenu-list__item"><a href="album-will.html">Will</a></li>
            				<li class="submenu-list__item"><a href="album-dubs.html">Dubs</a></li>
             			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
@@ -67,6 +67,7 @@
 							</li>	
 						</ul>
 					</div>
+					<div class="main-nav__overlay"></div>
 				</nav>
 			</div>	
 		</header>
@@ -75,19 +76,15 @@
 				<aside class="page-main__left-panel">
 					<div class="page-main__left-panel--element"></div>
 				</aside>
-				<section class="page-main__contacts">
-					<h1 class="page-main__title--contacts">About me</h1>
-					<p class="page-main__description--contacts">If you want to collaborate or simply just say hello,<br> don't hesitate to reach out!</p>
-					<ul class="page-main__contacts-list">
-						<li>
-							<span>E-mail:</span>
-							truevers.music@protonmail.com
-						</li>
-					</ul>
-				</section>
-				<section class="page-main__img-contacts">
-					<img src="img/about-me.jpg" alt="Truevers Foto" width="338px" height="436px">	
-				</section>
+				<section class="page-main__content">
+					<section class="page-main__contacts">
+						<h1 class="page-main__title--about">About me</h1>
+						<p class="page-main__description--about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veritatis odio esse minus mollitia inventore, praesentium autem! Enim eligendi ex deleniti nam rem debitis, at consequuntur harum officia provident molestias.</p>
+						<p class="page-main__description--about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor veritatis odio esse minus mollitia inventore, praesentium autem! Enim eligendi ex deleniti nam rem debitis, at consequuntur harum officia provident molestias.</p>
+					</section>
+					<section class="page-main__img-contacts">
+						<img src="img/about-me.jpg" alt="Truevers Foto" width="338px" height="436px">	
+					</section>
 				</section>
 				<section class="page-main__albums">
 					<h2 class="visually-hidden">Albums list</h2>
@@ -145,6 +142,7 @@
     <div class="modal__overlay"></div>
 
 		<script src="js/main-nav.js"></script>
+		<script src="js/submenu-list.js"></script>
 		<script src="js/subscribe.js"></script>
 
 </body>

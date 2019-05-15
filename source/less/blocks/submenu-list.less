@@ -1,47 +1,94 @@
 .submenu-list {
-  margin: 0;
-  padding: 5px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+}
+
+.submenu-list__show {
   display: block;
-  position: absolute;
-  width: 140px;
-  top: 115px;
-  left: 380px;
+}
+
+.submenu-list__closed {
+  display: none;
+}
+
+.submenu-list a{
   background-color: #ffffff;
-  border: 2px solid #ededf4;
-  border-radius: 8px;
-  margin-top: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, margin-top 0.3s, visibility 0s linear 0.3s;
-  
-}   
-
-.submenu-list::after {
-    content: ''; 
-    position: absolute; /* Абсолютное позиционирование */
-    left: 62px; top: -20px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-bottom: 10px solid #ffffff; /* Добавляем треугольник */
+  color: #3E4348;
 }
 
-.submenu-list::before {
-  content: ''; 
-  position: absolute; /* Абсолютное позиционирование */
-  left: 57px; top: -28px; /* Положение треугольника */
-  border: 14px solid transparent; /* Прозрачные границы */
-  border-bottom: 14px solid #ededf4; /* Добавляем треугольник */
-}
-
-.submenu-list__item {
-	display: block;
-}
-
-.submenu-list .submenu-list__item a  {
+/* .submenu-list .submenu-list__item a  {
   padding: 10px;
   color: #3E4348;
   text-decoration: none; 
+  background-color: transparent;
+}
+ */
+.submenu-list__item.site-list__item--active.active  a {
+  color: #C72E45;
 }
 
- .submenu-list__item.site-list__item--active.active  a {
-  color: #C72E45;
+@media (min-width: @tablet-width) {
+  .submenu-list {
+    position: absolute;
+    width: 190px;
+    top: 120px;
+    background-color: #ffffff;
+    border: 2px solid #ededf4;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1); 
+  }
+
+  .submenu-list::after {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 89px; top: -19px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid #ffffff; /* Добавляем треугольник */
+  }
+
+  .submenu-list::before {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 85px; top: -27px; /* Положение треугольника */
+    border: 14px solid transparent; /* Прозрачные границы */
+    border-bottom: 14px solid #ededf4; /* Добавляем треугольник */
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .submenu-list {
+    margin: 0;
+    padding: 5px;
+    display: block;
+    width: 190px;
+    top: 125px;
+    left: 380px;
+    
+    margin-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, margin-top 0.3s, visibility 0s linear 0.3s;
+    
+  }   
+
+
+
+  .submenu-list__item {
+  	display: block;
+  }
+
+  .submenu-list .submenu-list__item a  {
+    padding: 10px;
+    color: #3E4348;
+    text-decoration: none; 
+    background-color: transparent;
+  }
+
+   .submenu-list__item.site-list__item--active.active  a {
+    color: #C72E45;
+  }
 }

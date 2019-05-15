@@ -24,9 +24,9 @@
 							<li class="site-list__item">
 								<a href="about.html">About me</a>
 							</li>
-							<li class="site-list__item">
+							<li class="site-list__item site-list__album">
 								<a>Albums +</a>
-								<ul class="submenu-list">
+								<ul class="submenu-list submenu-list__closed">
             			<li class="submenu-list__item"><a href="album-will.html">Will</a></li>
            				<li class="submenu-list__item"><a href="album-dubs.html">Dubs</a></li>
             			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
@@ -37,7 +37,7 @@
 							</li>
 						</ul>
 						<ul class="main-nav__list social-list">
-							<li class="social-list__item ">
+							<li class="social-list__item">
 								<a href="#">
 									<svg class="social-list__icon" width="11px" height="20px">
                 		<use xlink:href="img/sprite.svg#icon-facebook"></use>
@@ -67,6 +67,7 @@
 							</li>	
 						</ul>
 					</div>
+					<div class="main-nav__overlay"></div>
 				</nav>
 			</div>	
 		</header>
@@ -114,7 +115,7 @@
 			</div>	
 		</footer>
 
-	  <section class="modal modal-subscribe">
+		<section class="modal modal-subscribe">
       <h2>Subscribe to news</h2>
       <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
       <form class="modal__subscribe-form" action="" method="post">
@@ -139,6 +140,7 @@
     <div class="modal__overlay"></div>
 
 		<script src="js/main-nav.js"></script>
+		<script src="js/submenu-list.js"></script>
 		<script src="js/subscribe.js"></script>
 		
 </body>

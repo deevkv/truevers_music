@@ -1,8 +1,28 @@
 .album-cover {
-	width: 285px;
+	margin: 0;
+	margin-bottom: 30px;
+	padding: 0;
 	height: 285px;
-	margin-top: 98px;
-	margin-left: 82px;
-	margin-right: 30px;
 	background-color: #C72E45;
 }
+
+@media (min-width: @tablet-width) {
+	.album-cover {
+		margin: 0 auto;
+		margin-bottom: 220px;
+		width: 285px;
+	}
+}
+
+
+@media (min-width: @desktop-width) {
+	.album-cover {
+		width: 285px;
+		height: 285px;
+		margin-top: 175px;
+		margin-left: 150px;
+		margin-right: 30px;
+		margin-bottom: 0;
+	}
+}
+

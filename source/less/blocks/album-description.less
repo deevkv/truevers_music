@@ -1,24 +1,36 @@
 .album-description {
-	width: 337px;
-	padding-top: 130px;
-	padding-left: 100px;
-
-}
+	padding-top: 50px;
+	text-align: center;
+}	
 
 .album-descriptionn__title {
 	margin: 0;
 	padding: 0;
 	font-family: "noto_sansbold", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
+	font-style: normal;
+	font-weight: bold;
 	font-size: 70px;
 	line-height: 57px; 
 }
 
-.album-description__discription {
-	margin: 0;
-	margin-top: 30px;
-	padding: 0;
-	font-size: 18px;
-
+@media (min-width: @tablet-width) {
+	.album-description {
+		padding-top: 150px;
+	}
 }
+
+
+@media (min-width: @desktop-width) {
+	.album-description {
+		width: 337px;
+		padding-top: 240px;
+		text-align: left;
+	}
+
+	.album-description__discription {
+		margin: 0;
+		margin-top: 30px;
+		padding: 0;
+		font-size: 18px;
+	}
+}	

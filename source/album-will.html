@@ -11,7 +11,7 @@
 		<header class="page-header">
 			<div class="page-header__wrapper">
 				<div class="page-header__block"></div>
-				<a class="page-header__logo">
+				<a href="index.html" class="page-header__logo">
 					<img class="page-header__logo-image" width="65" height="65" src="img/logotype-truevers.svg" alt="Logo truevers music">
 				</a>	
 				<nav class="main-nav main-nav--closed main-nav--nojs">
@@ -24,18 +24,14 @@
 							<li class="site-list__item">
 								<a href="about.html">About me</a>
 							</li>
-
-
-							<li class="site-list__item site-list__item--active">
+							<li class="site-list__item site-list__album site-list__album--active  site-list__item--active">
 								<a>Albums +</a>
-								<ul class="submenu-list">
+								<ul class="submenu-list submenu-list__closed">
             			<li class="submenu-list__item site-list__item--active active"><a>Will</a></li>
            				<li class="submenu-list__item"><a href="album-dubs.html">Dubs</a></li>
             			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
         				</ul>
 							</li>
-
-
 							<li class="site-list__item">
 								<a href="contacts.html">Contacts</a>
 							</li>
@@ -71,6 +67,7 @@
 							</li>	
 						</ul>
 					</div>
+					<div class="main-nav__overlay"></div>
 				</nav>
 			</div>	
 		</header>
@@ -82,7 +79,7 @@
 				<section class="page-main__content">
 					<h1 class="visually-hidden">Album Matrix</h1>
 					<section class="album-description">
-						<h2 class="album-descriptionn__title">MATRIX</h2>
+						<h2 class="album-descriptionn__title">WILL</h2>
 						<p class="album-description__discription">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 					</section>
 					<section class="album-tracks">
@@ -143,6 +140,32 @@
 			</div>	
 		</footer>
 
+		<section class="modal modal-subscribe">
+      <h2>Subscribe to news</h2>
+      <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
+      <form class="modal__subscribe-form" action="" method="post">
+        <p>
+          <label class="modal__input-title indicates" for="First-name">First name</label>
+          <input type="text" required>
+        </p>
+        <p>
+          <label class="modal__input-title" for="Last-name">Last name</label>
+          <input type="text">
+    
+        <p>
+          <label class="modal__input-title indicates" for="user-email">E-mail</label>
+          <input type="email" required name="e-mail">
+        </p>
+        <p class="modal__indicates">indicates required</p>
+        <button class="button button-subscribe" type="submit">Subscribe</button>
+      </form>
+      <button class="modal__close" type="button">Close</button>
+    </section>
+
+    <div class="modal__overlay"></div>
+
 		<script src="js/main-nav.js"></script>
+		<script src="js/submenu-list.js"></script>
+		<script src="js/subscribe.js"></script>
 </body>
 </html>

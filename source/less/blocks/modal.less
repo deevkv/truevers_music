@@ -1,5 +1,5 @@
 .modal {
-	width: 621px;
+	width: 320px;
 	position: fixed;
 	color: #000000;
 	background-color: #ffffff;
@@ -11,7 +11,7 @@
 }
 
 .modal h2 {
-	font-size: 50px;
+	font-size: 32px;
 	font-weight: bold;
 	margin: 0;
 	text-align: center;
@@ -20,14 +20,13 @@
 
 .modal__description {
 	margin-top: 10px;
-	margin-bottom: 35px;
 	text-align: center;
 	color: #3E4348;
 }
 
 .modal__subscribe-form {
-	margin-top: 27px;
-	padding: 0 38px;
+	margin-top: 15px;
+	padding: 0 10px;
 	text-align: left;
 	color: #3E4348;
 }
@@ -39,7 +38,7 @@
 .modal__indicates {
 	text-align: right;
 	margin: 0;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 .modal__indicates::before {
@@ -51,8 +50,8 @@
 
 .modal__close {
 	position: absolute;
-	top: -45px;
-	right: -45px;
+	top: 8px;
+	right: 8px;
 
 	width: 35px;
 	height: 35px;
@@ -73,10 +72,10 @@
 	top: 17px;
 	right: 0;
 
-	width: 35px;
+	width: 30px;
   height: 5px;
 
-	background-color: #ffffff;
+	background-color: #3E4348;
 	border-radius: 5px;
 }
 
@@ -101,7 +100,7 @@
 	width: 100%;
 	height: 100%;
 
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.6);
 
 	z-index: 40;
 
@@ -121,5 +120,41 @@
 .modal-show {
 	opacity: 1;
 	transition: all .5s;
-    visibility: visible;
+  visibility: visible;
 }
+
+@media (min-width: @desktop-width) {
+	.modal {
+		width: 621px;
+	}
+
+	.modal h2{
+		font-size: 50px;
+	}
+
+	.modal__close {
+		position: absolute;
+		top: -45px;
+		right: -45px;
+	}
+
+	.modal__close::before,
+	.modal__close::after {
+		width: 35px;
+		background-color: #ffffff;
+	}
+
+	.modal__description {
+		margin-bottom: 35px;
+	}
+
+	.modal__subscribe-form {
+		margin-top: 27px;
+		padding: 0 38px;
+	}
+
+	.modal__indicates {
+		margin-bottom: 25px;
+	}
+
+}	
