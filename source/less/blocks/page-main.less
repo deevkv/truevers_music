@@ -1,5 +1,5 @@
 .page-main {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	padding-bottom: 40px;
 }
@@ -9,6 +9,7 @@
 }
 
 .page-main__wrapper {
+	margin: 0 auto;
 	width: 320px;
 	background-color: #ffffff;
 }
@@ -24,7 +25,12 @@
 
 
 .page-main__title--about {
+	width: 100%;
 	margin-top: 0;
+}
+
+.page-main__description--about {
+	width: 100%;
 }
 
 .page-main__title--contacts {
@@ -101,15 +107,16 @@
 		text-align: center;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {  // ------------------------------------------------tablet
 	.page-main {
-		margin: 0 auto;
+		margin: 0;
 		padding: 0;
 		flex-grow: 1; // для прижатия footer
 	}
 
 	.page-main__wrapper {
-		margin: 0;
+		margin: 0 auto;
+		padding-bottom: 135px;
 		width: 100%;
 		overflow-x: hidden;
 		/* max-width: 768px; */
@@ -122,7 +129,7 @@
 	.page-main__left-panel {
 		margin: 0;
 		padding: 0;
-		width: 80px;
+		min-width: 80px;
 		text-align: center;
 	}
 
@@ -183,50 +190,130 @@
 	.page-main__content {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
+		align-items: center;
 		flex-grow: 1;
-		padding: 0 50px;		
+		/* padding: 0 50px; */
+		padding: 0 100px;
+		padding-left: 135px;	
 	}
 
 	.page-main__title {
-		margin-top: 82px;
-		margin-left: 22px;
+		margin: 0;
+		margin-top: 100px;
 		margin-right: 0;
-		margin-bottom: 20px;
+		margin-bottom: 32px;
+		padding: 0;
 		font-size: 50px;
 	}
 
+	.page-main__description--about {
+		width: 435px;
+	}
+
+
 	.page-main__img img{
-		margin-left: 197px;
-		margin-bottom: 20px;
+		margin-left: 35px;
+		margin-bottom: 33px;
 		/* margin-bottom: -48px; */
-		width: 369px;
-		height: 523px;
+		width:  334px; //369px;
+		height: 424px; //523px;
 		vertical-align:bottom; /* вот она */
 		display:inline-block;
 	}
 
+	.page-main__img-contacts img {
+ 		border: 7px solid #c83c45;
+ 		margin-top: 30px;
+ 		margin-bottom: 27px;
+	} 
+
+	.page-main__contacts {
+  	width: 435px;
+  }
 }
 
-@media(min-width: @tablet-ipad-pro-width){
+@media(min-width: @tablet-ipad-pro-width){  // ------------------------------------------iPadPro
+	.page-main__content {
+		min-height: 1030px;
+		padding: 0 100px;
+	}
+
+	.page-main__title {
+		margin-left: 63px;
+		font-size: 60px;
+	}
+
 	.page-main__img img {
-		max-width: 616px;
-		width: 610px;
-		height: 864px;
+		margin-left: 165px;
+		width: 454px;
+		height: 557px;
   }	
+
 }  
 
+@media (min-width: @desktop-width-one) { //---------------------
+		.page-main__wrapper {
+			padding: 0;
+			overflow-x: visible;
+		}
 
-@media (min-width: @desktop-width) {
+		.page-main__content {
+			padding: 0;
+			min-height: 400px;
+			flex-direction: row;
+		}
+
+		.page-main__title {
+			margin: 0;
+			font-size: 55px;
+		}
+		
+		.page-main__img img {
+			margin: 0;
+			margin-left: 100px;
+			margin-top: -45px;
+		}
+
+		.page-main__img-contacts img {
+  		margin: 0;
+  		margin-left: 60px;
+  } 
+
+  	.page-main__title--contacts {
+		/* margin-top: 105px; */
+		margin-bottom: 20px;
+    font-size: 50px;
+   } 
+
+	.page-main__title--about {
+		/* margin-top: 180px; */
+		margin-bottom: 20px;
+    font-size: 50px;
+   } 
+}
+
+@media (min-width: @desktop-width-two) {
+  	.page-main__title {
+			font-size: 60px;
+			margin-left: 180px;
+	}
+		.page-main__img-contacts img {
+  		margin: 0;
+  		margin-left: 100px;
+	}
+		
+}
+
+@media (min-width: @desktop-width) {  //------------------------------------------------desktop
 	.page-main__content {
 		flex-direction: row;
-		justify-content: flex-start;
-		padding-left: 165px;
-		/* box-shadow: -8px 8px 10px -10px rgba(0,0,0,0.1); */
+		justify-content: center;
+		padding: 0;
 	}
 
 	.page-main__contacts {
-		padding-left: 112px;
+		padding: 0;
 		display: flex;
 		flex-direction: column;
 		width: 450px;
@@ -235,7 +322,7 @@
 	.page-main__form {
 		display: flex;
 		flex-direction: column;
-		margin-top: 80px;
+		/* margin-top: 80px; */
 		margin-left: 50px;
 		width: 460px;
 	}
@@ -263,29 +350,18 @@
 	.page-main__title {
 		width: 522px;
 		margin: 0;
-		margin-top: 165px;
+		margin-left: 65px;
+		/* margin-top: 165px; */
 		font-size: 70px;
 	}
 
-	.page-main__title--contacts {
-		margin-top: 105px;
-		margin-bottom: 20px;
-    font-size: 70px;
-   } 
-
-	.page-main__title--about {
-		margin-top: 180px;
-		margin-bottom: 20px;
-    font-size: 70px;
-   } 
-
 	.page-main__img-contacts {
 		margin-left: 145px;
-		margin-top: 145px;
 	}
 
   .page-main__img-contacts img {
   	margin: 0;
+  	margin-bottom: 20px;
   	padding: 0;
   	display: block;
 		border: 7px solid #c83c45;
@@ -308,18 +384,20 @@
 
 	}
 
-/* 	.page-main__wrapper {
-	min-height: 736px;
-} */
+	.page-main__wrapper {
+		padding: 0;
+		overflow-x: visible;
+	} 
 
 	.page-main__left-panel {
+		padding: 0;
 		min-height: 300px;
 		max-height: 800px;
-		width: 215px;
+		min-width: 215px;
 		background-color: #F8F8FF;
 	}
-}
 
-.active {
-	color: red;
-} 
+	.active {
+		color: red;
+	} 
+}	
