@@ -195,7 +195,6 @@
 		flex-grow: 1;
 		/* padding: 0 50px; */
 		padding: 0 100px;
-		padding-left: 135px;	
 	}
 
 	.page-main__title {
@@ -236,7 +235,7 @@
 @media(min-width: @tablet-ipad-pro-width){  // ------------------------------------------iPadPro
 	.page-main__content {
 		min-height: 1030px;
-		padding: 0 100px;
+		
 	}
 
 	.page-main__title {
@@ -253,67 +252,67 @@
 }  
 
 @media (min-width: @desktop-width-one) { //---------------------
-		.page-main__wrapper {
-			padding: 0;
-			overflow-x: visible;
+	.page-main__wrapper {
+		padding: 0;
+		overflow-x: visible;
 		}
 
-		.page-main__content {
-			padding: 0;
-			min-height: 400px;
-			flex-direction: row;
-		}
+	.page-main__content {
+		padding: 0;
+		padding-left: 60px;
+		padding-bottom: 150px;
+		min-height: 500px;
+		flex-direction: row;
+	}
 
-		.page-main__title {
-			margin: 0;
-			font-size: 55px;
-		}
+	.page-main__title {
+		margin: 0;
+		font-size: 45px;
+	}
 		
-		.page-main__img img {
-			margin: 0;
-			margin-left: 100px;
-			margin-top: -45px;
-		}
+	.page-main__img img {
+		margin: 0;
+		margin-left: 100px;
+		margin-top: -45px;
+		width: 380px;
+  	height: auto;
+	}
 
-		.page-main__img-contacts img {
-  		margin: 0;
-  		margin-left: 60px;
+	.page-main__contacts {
+		padding: 0;
+		padding-bottom: 75px;
+	}
+
+	.page-main__img-contacts img {
+  	margin: 0;
+  	margin-left: 60px;
   } 
 
-  	.page-main__title--contacts {
-		/* margin-top: 105px; */
+  .page-main__title--contacts {
 		margin-bottom: 20px;
     font-size: 50px;
-   } 
+  } 
 
 	.page-main__title--about {
-		/* margin-top: 180px; */
-		margin-bottom: 20px;
+		padding-top: 83px;
     font-size: 50px;
    } 
-}
 
-@media (min-width: @desktop-width-two) {
-  	.page-main__title {
-			font-size: 60px;
-			margin-left: 180px;
+  .page-main__left-panel--element {
+		margin-top: 170px;
 	}
-		.page-main__img-contacts img {
-  		margin: 0;
-  		margin-left: 100px;
-	}
-		
 }
 
 @media (min-width: @desktop-width) {  //------------------------------------------------desktop
 	.page-main__content {
 		flex-direction: row;
 		justify-content: center;
+		min-height: 700px;
 		padding: 0;
+		padding-bottom: 40px;
 	}
 
 	.page-main__contacts {
-		padding: 0;
 		display: flex;
 		flex-direction: column;
 		width: 450px;
@@ -322,7 +321,6 @@
 	.page-main__form {
 		display: flex;
 		flex-direction: column;
-		/* margin-top: 80px; */
 		margin-left: 50px;
 		width: 460px;
 	}
@@ -375,7 +373,7 @@
   }
 
 	.page-main__img img{
-		margin-top: -45px;
+		margin-top: -62px;
 		margin-left: 125px;
 		width: 594px;
 		height: auto;
@@ -396,6 +394,34 @@
 		min-width: 215px;
 		background-color: #F8F8FF;
 	}
+
+	.page-main__left-panel--element {
+		margin-top: 270px;
+	}
+
+	 @keyframes slidein-back {
+  	from {
+    	right: -48px;
+    	margin-top: 70px
+
+  	}
+  	to {
+    	right: -15px;
+			margin-top: 0px;
+		}
+	}
+
+  @keyframes slidein {
+  	from {
+  		height: 200px;  
+    	margin-top: 200px;
+  	}
+  	to {
+    	height: 100px;  
+    	margin-top: 270px;
+		}
+	}
+
 
 	.active {
 		color: red;

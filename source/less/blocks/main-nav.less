@@ -161,16 +161,24 @@
 }  
 
 
-@media (min-width: @desktop-width) {
-	 .main-nav__wrapper {
+
+
+@media (min-width: @desktop-width-one) {
+	.main-nav__wrapper {
 	 	margin-top: 60px;
 
 		flex-direction: row;
 		justify-content: space-between;
 	}
 
-	 .main-nav__list {
-  	margin-left: 85px;
+	.main-nav__list {
+  	margin-left: 20px;
   }
   
+}
+
+@media (min-width: @desktop-width) {
+	.main-nav__list {
+  	margin-left: 85px;
+  }
 }
