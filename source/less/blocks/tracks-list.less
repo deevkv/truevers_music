@@ -10,6 +10,7 @@
 	padding: 0;
 	font-size: 18px;
 	list-style-type:none;
+	cursor: pointer;
 	
 }
 
@@ -22,8 +23,8 @@
 	float: right;
 	font-size: 18px;
 	font-style: normal;
-    font-weight: normal;
-    line-height: normal;
+  font-weight: normal;
+  line-height: normal;
 
 }
 
@@ -32,4 +33,32 @@
 	padding-right: 20px;
 	counter-increment: heading;
     content: counter(heading) " ";
+}
+
+@media (min-width: @desktop-width-one) {
+	.tracks-list__item {
+		position: relative;
+	}
+
+	.tracks-list__item::after {
+		content: "";
+		position: absolute;
+		height: 0;
+		width: 0%;
+		top: 30px;
+		left: -2px;
+		border: 2px solid #C72E45;
+		opacity: 0;
+		visibility: hidden;
+		
+	}
+
+	.tracks-list__item:hover::after {
+		width: 100%;
+		opacity: 1;
+		visibility: visible;
+
+		transition: opacity 0.5s, linear 0.2s;
+	}
+
 }

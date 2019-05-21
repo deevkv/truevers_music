@@ -6,6 +6,8 @@
 
 .page-main__content {
 	padding: 0 15px;
+	animation-duration: 0.5s;
+  animation-name: opacity-title;
 }
 
 .page-main__wrapper {
@@ -22,6 +24,16 @@
 	font-style: normal;
 	font-weight: bold;
 }
+
+ @keyframes opacity-title {
+  	from {
+    	opacity: 0;
+
+  	}
+  	to {
+    	opacity: 1;
+		}
+	}
 
 
 .page-main__title--about {
@@ -95,7 +107,7 @@
  		display: block;
  		margin: 0 auto;
 		width: 290px;
-  	height: 363px;
+  	height: 363px;	
 } 
 
 .page-main__contacts-list span {
@@ -167,7 +179,7 @@
 	 @keyframes slidein-back {
   	from {
     	right: -48px;
-    	margin-top: 50px
+    	margin-top: 50px;
 
   	}
   	to {
@@ -280,7 +292,7 @@
 
 	.page-main__contacts {
 		padding: 0;
-		padding-bottom: 75px;
+		padding-bottom: 28px;
 	}
 
 	.page-main__img-contacts img {
@@ -346,6 +358,7 @@
 	}
 
 	.page-main__title {
+		position: relative;
 		width: 522px;
 		margin: 0;
 		margin-left: 65px;
@@ -359,7 +372,6 @@
 
   .page-main__img-contacts img {
   	margin: 0;
-  	margin-bottom: 20px;
   	padding: 0;
   	display: block;
 		border: 7px solid #c83c45;
