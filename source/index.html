@@ -28,7 +28,7 @@
 								<a>Albums +</a>
 								<ul class="submenu-list submenu-list__closed">
             			<li class="submenu-list__item"><a href="album-will.html">Will</a></li>
-           				<li class="submenu-list__item"><a href="album-dubs.html">Dubs</a></li>
+           				<li class="submenu-list__item"><a href="album-dust.html">Dust</a></li>
             			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
         				</ul>
 							</li>
@@ -77,7 +77,10 @@
 					<div class="page-main__left-panel--element"></div>
 				</aside>
 				<section class="page-main__content">
+					<div>
 						<h1 class="page-main__title">Hello!<br>I am Truevers.<br> I make music.</h1>
+						<audio src="http://mp3.music.lib.ru/mp3/s/singly/singly-able_to_love_original_mix-2.mp3" preload="auto" />
+					</div>
 					<picture class="page-main__img">
 						<source media="(min-width: 1200px)" srcset="img/truevers-dekstop.png">
 						<source media="(min-width: 768px)" srcset="img/truevers-laptop.png">
@@ -89,17 +92,23 @@
 					<ul class="albums-list">
 						<li class="albums-item">
         				<a href="album-will.html"><span>Will</span>
-        				<div class="album-item__cover"></div>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-will.jpg" alt="Album Dust">
+        				</div>
         				</a>
 						</li>
 						<li class="albums-item">
-        				<a href="album-dubs.html"><span>Dubs</span>
-        				<div class="album-item__cover"></div>
+        				<a href="album-dust.html"><span>Dust</span>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-dust.jpg" alt="Album Dust">
+        				</div>
         				</a>
 						</li>
 						<li class="albums-item">
         				<a href="album-matrix.html"><span>Matrix</span>
-        				<div class="album-item__cover"></div>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-matrix.jpg" alt="Album Dust">
+        				</div>
         				</a>
 						</li>
 					</ul>
@@ -142,6 +151,12 @@
 		<script src="js/main-nav.js"></script>
 		<script src="js/submenu-list.js"></script>
 		<script src="js/subscribe.js"></script>
+		<script src="js/audiojs/audio.min.js"></script>
+		<script>
+		  audiojs.events.ready(function() {
+		    var as = audiojs.createAll();
+		  });
+		</script>
 		
 </body>
 </html>
