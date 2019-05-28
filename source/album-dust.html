@@ -76,40 +76,51 @@
 				<aside class="page-main__left-panel">
 					<div class="page-main__left-panel--element"><b>2019</b></div>
 				</aside>
-				<section class="page-main__content">
-					<h1 class="visually-hidden">Album Matrix</h1>
-					<section class="album-description">
-						<h2 class="album-descriptionn__title">Dust</h2>
-						<p class="album-description__discription">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-					</section>
-					<section class="album-tracks">
-						<h2 class="visually-hidden">Matrix track list</h2>
-						<ol class="album-tracks__list tracks-list">
-							<li class="tracks-list__item">
-								<a href="#">Freak On a Leash</a>
-								<b>3:20</b>
-							</li>
-							<li class="tracks-list__item">
-								<a href="#">Coming Undone</a>
-								<b>2:35</b>
-							</li>
-							<li class="tracks-list__item">
-								<a href="#">Hater</a>
-								<b>4:20</b>
-							</li>
-							<li class="tracks-list__item">
-								<a href="#">Word Up</a>
-								<b>2:14</b>
-							</li>
-						</ol>
-					</section>
-				
-					<section class="album-cover">
-						<h2 class="visually-hidden">Matrix cover</h2>
-						<img src="img/album-dust.jpg" alt="Album Dust">
-					</section>
+				<section class="page-main__content--album">
+					<div class="page-main__wrapper-content--left">
+						<h1 class="visually-hidden">Album Matrix</h1>
+						<section class="album-description">
+							<h2 class="album-descriptionn__title">Dust</h2>
+							<p class="album-description__discription">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+						</section>
+						<section class="album-tracks">
+							<h2 class="visually-hidden">Matrix track list</h2>
+							<ol class="album-tracks__list tracks-list">
+								<li class="tracks-list__item">
+									<a href="#">Freak On a Leash</a>
+									<b>3:20</b>
+								</li>
+								<li class="tracks-list__item">
+									<a href="#">Coming Undone</a>
+									<b>2:35</b>
+								</li>
+								<li class="tracks-list__item">
+									<a href="#">Hater</a>
+									<b>4:20</b>
+								</li>
+								<li class="tracks-list__item">
+									<a href="#">Word Up</a>
+									<b>2:14</b>
+								</li>
+							</ol>
+						</section>
+						<section class="album-cover">
+							<h2 class="visually-hidden">Matrix cover</h2>
+							<img src="img/album-dust.jpg" alt="Album Dust">
+						</section>
+					</div>
+					<aside class="audio--album">
+						<button class="audio__button button-play"></button>
+						<div class="audio__wrapper">
+							<input class="audio__seek-slider" type="range" min="0" max="150" value="0" step="1">
+							<div id="timeBox">
+				  			<span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
+							</div>
+							<button class="audio__volume audio__up"></button>
+							<input class="audio__volume-slider" type="range" min="0" max="100" value="100" step="1">
+						</div>
+					</aside>
 				</section>
-				
 				<section class="page-main__albums">
 					<h2 class="visually-hidden">Albums list</h2>
 					<ul class="albums-list">
@@ -174,5 +185,6 @@
 		<script src="js/main-nav.js"></script>
 		<script src="js/submenu-list.js"></script>
 		<script src="js/subscribe.js"></script>
+		<script src="js/audio.js"></script>
 </body>
 </html>

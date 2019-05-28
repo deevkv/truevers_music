@@ -76,10 +76,21 @@
 				<aside class="page-main__left-panel">
 					<div class="page-main__left-panel--element"></div>
 				</aside>
+
 				<section class="page-main__content">
-					<div>
+					<div class="page-main__wrapper-content">
 						<h1 class="page-main__title">Hello!<br>I am Truevers.<br> I make music.</h1>
-						<audio src="http://mp3.music.lib.ru/mp3/s/singly/singly-able_to_love_original_mix-2.mp3" preload="auto" />
+						<aside class="audio">
+							<button class="audio__button button-play"></button>
+							<div class="audio__wrapper">
+								<input class="audio__seek-slider" type="range" min="0" max="120" value="0" step="1">
+								<div id="timeBox">
+					  			<span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
+								</div>
+								<button class="audio__volume audio__up"></button>
+								<input class="audio__volume-slider" type="range" min="0" max="100" value="100" step="1">
+							</div>
+						</aside>	
 					</div>
 					<picture class="page-main__img">
 						<source media="(min-width: 1200px)" srcset="img/truevers-dekstop.png">
@@ -151,12 +162,7 @@
 		<script src="js/main-nav.js"></script>
 		<script src="js/submenu-list.js"></script>
 		<script src="js/subscribe.js"></script>
-		<script src="js/audiojs/audio.min.js"></script>
-		<script>
-		  audiojs.events.ready(function() {
-		    var as = audiojs.createAll();
-		  });
-		</script>
+		<script src="js/audio.js"></script>
 		
 </body>
 </html>
