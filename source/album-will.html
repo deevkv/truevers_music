@@ -85,21 +85,21 @@
 						</section>					
 						<section class="album-tracks">
 							<h2 class="visually-hidden">Matrix track list</h2>
-							<ol class="album-tracks__list tracks-list">
-								<li class="tracks-list__item">
-									<a href="#">Freak On a Leash</a>
+							<ol id="myList" class="album-tracks__list tracks-list">
+								<li class="tracks-list__item" value="0">
+									Dsm
 									<b>3:20</b>
 								</li>
-								<li class="tracks-list__item">
-									<a href="#">Coming Undone</a>
+								<li class="tracks-list__item" value="1">
+									Will
 									<b>2:35</b>
 								</li>
-								<li class="tracks-list__item">
-									<a href="#">Hater</a>
+								<li class="tracks-list__item" value="2">
+									Hater
 									<b>4:20</b>
 								</li>
-								<li class="tracks-list__item">
-									<a href="#">Word Up</a>
+								<li class="tracks-list__item" value="3">
+									Word Up
 									<b>2:14</b>
 								</li>
 							</ol>
@@ -111,14 +111,12 @@
 					</div>
 					<aside class="audio--album">
 						<button class="audio__button button-play"></button>
-						<div class="audio__wrapper">
 							<input class="audio__seek-slider" type="range" min="0" max="150" value="0" step="1">
 							<div id="timeBox">
 				  			<span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
 							</div>
 							<button class="audio__volume audio__up"></button>
 							<input class="audio__volume-slider" type="range" min="0" max="100" value="100" step="1">
-						</div>
 					</aside>
 				</section>
 				<section class="page-main__albums">

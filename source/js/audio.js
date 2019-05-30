@@ -10,13 +10,11 @@
   var curTimeText = document.getElementById("curTimeText");
   var durTimeText = document.getElementById("durTimeText"); 
 
+  var mylist = document.getElementById("myList");
 
-  var seeking = false;
-  var seekto;
 
-  var audio =  new Audio('mp3/dsm.mp3');
+  var audio =  new Audio('mp3/robot.mp3');
   audio.loop = false;
-
 
 
   playButton.addEventListener('click', playSound);
@@ -32,25 +30,53 @@
 
   audio.addEventListener("timeupdate", function(){ seekTimeUpdate(); });
 
+  mylist.addEventListener("click", initAudio);
+
+  
+
+
+  function initAudio(event) {
+
+    var dir = "mp3/";
+    var ext = ".mp3";
+
+    var audio2 = new Audio();
+    audio.src = dir+"robot"+ext;
     
 
-  function playSound(){ 
+      var arr = ['robot', 'dms', 'will', 'bro'];
+      var infoLi = event.target.value;
+      var infoTime = event.target.parentNode.value;
+
+       if (infoLi == parseInt(infoLi)) {changeTrackPlay(arr[infoLi]);}
+       if (infoTime == parseInt(infoTime)) {changeTrackPlay(arr[infoTime]);}
+    
+      function changeTrackPlay(numTrack) {
+        audio.src = dir+numTrack+ext;
+        playSound(audio.src);
+      }
+  }  
+
+
+  function playSound(track){ 
     if(audio.paused == false) {
-      audio.pause();
+      audio.pause(track);
 
       playButton.classList.remove('button-pause');
       playButton.classList.add('button-play');
-
+      
+      audioWrapper.classList.add('audio__wrapper--closed');
       audioWrapper.classList.remove('audio__wrapper--opened');
 
+
     } else {
-      audio.play();
+      audio.play(track);
 
       playButton.classList.remove('button-play');
       playButton.classList.add('button-pause');
-
+ 
+      audioWrapper.classList.remove('audio__wrapper--closed');
       audioWrapper.classList.add('audio__wrapper--opened');
-      
     }     
   };
 
@@ -104,8 +130,8 @@ function seekTimeUpdate(){
     if(curMins < 10){ curMins = "0"+curMins; }
     if(durMins < 10){ durMins = "0"+durMins; }
 
-    curTimeText.innerText = curMins+":"+curSecs;
-    durTimeText.innerText = durMins+":"+durSecs;
+    curTimeText.innerText = curMins+":"+curSecs
+    if ( !isNaN(durMins) ) { durTimeText.innerText = durMins+":"+durSecs }
   }
 
 
