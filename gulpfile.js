@@ -52,7 +52,7 @@ gulp.task("less", function() {
 });
 
 gulp.task("clean", function() {
-	return del("build");
+	return del(["build/**, !build/.git"]);
 });
 
 gulp.task("copy", function() {
