@@ -11,6 +11,7 @@
   var durTimeText = document.getElementById("durTimeText"); 
 
   var mylist = document.getElementById("myList");
+  var infoNameTrack = document.getElementById("trackName");
 
 
   var audio =  new Audio('mp3/robot.mp3');
@@ -53,9 +54,16 @@
     
       function changeTrackPlay(numTrack) {
         audio.src = dir+numTrack+ext;
+        showNameTrack(numTrack);
         playSound(audio.src);
       }
   }  
+
+
+  function showNameTrack(trackName) {
+    trackName = trackName[0].toUpperCase() + trackName.slice(1);
+    infoNameTrack.innerText = trackName;
+  }
 
 
   function playSound(track){ 
