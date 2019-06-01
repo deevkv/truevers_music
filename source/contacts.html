@@ -77,8 +77,8 @@
 					<div class="page-main__left-panel--element"></div>
 				</aside>
 				<section class="page-main__content">
-					<section class="page-main__contacts">
-						<h1 class="page-main__title--contacts">Contacts</h1>
+					<div class="page-main__contacts">
+						<h2 class="page-main__title--contacts">Contacts</h2>
 						<p class="page-main__description--contacts">If you want to collaborate or simply just say hello,<br> don't hesitate to reach out!</p>
 						<ul class="page-main__contacts-list">
 							<li>
@@ -86,32 +86,33 @@
 								truevers.music@protonmail.com
 							</li>
 						</ul>
-					</section>
+					</div>
 					<section class="page-main__form form">
-							<form action="textarea1.php" method="post">
-		    				<b class="form__input-title indicates">Leave a message</b>
-		   				 	<textarea class="indicates" rows="10" cols="45" name="text"></textarea>
-		   				 	<p>
-		           	 	<label class="indicates" for="First-name indicates">First name</label>
-		            	<input type="text" required>
-								</p>
-								<p>
-		            	<label class="form__input-title" for="Last-name">Last name</label>
-		            	<input type="text">
-								</p>
-								<p>
-		            	<label class="form__input-title indicates" for="user-email">E-mail</label>
-		            	<input type="email" required name="e-mail">
-								</p>
-		            <p>
-		              <label class="form__checkbox">
-		                  <input type="checkbox" name="remember" class="visually-hidden">
-		                  <span class="form__checkbox-indicator"></span>
-		                  Subscribe to news
-		              </label>
-		            </p>
-		    				<p><input class="button button-contacts" type="submit" value="Send a message"></p>
-		  				</form>
+						<h2 class="visually-hidden">Contact form</h2>	
+						<form action="textarea1.php" method="post">
+	    				<b class="form__input-title indicates">Leave a message</b>
+	   				 	<textarea class="indicates" rows="10" cols="45" name="text"></textarea>
+	   				 	<p>
+	           	 	<label class="indicates">First name</label>
+	            	<input type="text" required>
+							</p>
+							<p>
+	            	<label class="form__input-title">Last name</label>
+	            	<input type="text">
+							</p>
+							<p>
+	            	<label class="form__input-title indicates">E-mail</label>
+	            	<input type="email" required name="e-mail">
+							</p>
+	            <p>
+	              <label class="form__checkbox">
+	                  <input type="checkbox" name="remember" class="visually-hidden">
+	                  <span class="form__checkbox-indicator"></span>
+	                  Subscribe to news
+	              </label>
+	            </p>
+	    				<p><input class="button button-contacts" type="submit" value="Send a message"></p>
+	  				</form>
 					</section>
 				</section>
 				<section class="page-main__albums">
@@ -154,17 +155,17 @@
 	  <section class="modal modal-subscribe">
       <h2>Subscribe to news</h2>
       <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
-      <form class="modal__subscribe-form" action="" method="post">
+      <form class="modal__subscribe-form" action="#" method="post">
         <p>
-          <label class="modal__input-title indicates" for="First-name">First name</label>
+          <label class="modal__input-title indicates">First name</label>
           <input type="text" required>
         </p>
         <p>
-          <label class="modal__input-title" for="Last-name">Last name</label>
+          <label class="modal__input-title">Last name</label>
           <input type="text">
     
         <p>
-          <label class="modal__input-title indicates" for="user-email">E-mail</label>
+          <label class="modal__input-title indicates">E-mail</label>
           <input type="email" required name="e-mail">
         </p>
         <p class="modal__indicates">indicates required</p>

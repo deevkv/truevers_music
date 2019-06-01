@@ -7,66 +7,79 @@
   var seekSlider = document.querySelector('.audio__seek-slider');
   var volumeSlider = document.querySelector('.audio__volume-slider');
 
-  var curTimeText = document.getElementById("curTimeText");
-  var durTimeText = document.getElementById("durTimeText"); 
+  var curTimeText = document.getElementById('curTimeText');
+  var durTimeText = document.getElementById('durTimeText'); 
 
-  var mylist = document.getElementById("myList");
-  var infoNameTrack = document.getElementById("trackName");
+  var playList = document.querySelector('.playList');
+  var infoNameTrack = document.getElementById('trackName');
 
-
-  var audio =  new Audio('mp3/robot.mp3');
+  var audio =  new Audio('mp3/dsm.mp3');
   audio.loop = false;
 
 
   playButton.addEventListener('click', playSound);
   muteButton.addEventListener("click", mute);
 
-  seekSlider.addEventListener("mousedown", function(event){ seeking = true; seek(event); });
-  seekSlider.addEventListener("mousemove", function(event){ seek(event); });
-  seekSlider.addEventListener("mouseup",function(){ seeking = false; });
+  seekSlider.addEventListener('mousedown', function(event){ seeking = true; seek(event); });
+  seekSlider.addEventListener('mousemove', function(event){ seek(event); });
+  seekSlider.addEventListener('mouseup',function(){ seeking = false; });
 
   audio.addEventListener("ended", stopButton);
 
   volumeSlider.addEventListener("mousemove", setvolume);
 
-  audio.addEventListener("timeupdate", function(){ seekTimeUpdate(); });
+  audio.addEventListener('timeupdate', function(){ seekTimeUpdate(); });
 
-  mylist.addEventListener("click", initAudio);
+  playList.addEventListener("click", initAudio);
 
-  
 
 
   function initAudio(event) {
 
-    var dir = "mp3/";
-    var ext = ".mp3";
+    var showTrack = document.querySelector('.tracks-list__item--active');
+
+    playButton.classList.add('button-pause')
+
+    var dir = 'mp3/';
+    var ext = '.mp3';
 
     var audio2 = new Audio();
-    audio.src = dir+"robot"+ext;
+    audio.src = dir+'dsm'+ext;
     
 
-      var arr = ['robot', 'dms', 'will', 'bro'];
-      var infoLi = event.target.value;
-      var infoTime = event.target.parentNode.value;
+    var albums = [
+      ['dsm', 'will', 'bitter', 'stars'], 
+      ['robot', 'revolver', 'breaking_bad', 'war'], 
+      ['matrix', 'second_birth', 'dead']
+    ];  
 
-       if (infoLi == parseInt(infoLi)) {changeTrackPlay(arr[infoLi]);}
-       if (infoTime == parseInt(infoTime)) {changeTrackPlay(arr[infoTime]);}
-    
-      function changeTrackPlay(numTrack) {
-        audio.src = dir+numTrack+ext;
-        showNameTrack(numTrack);
-        playSound(audio.src);
-      }
+    var infoLi = event.target.value;
+    var infoTime = event.target.parentNode.value;
+    var infoList = event.currentTarget.id;
+    var albumNumber;
+
+    if (infoList === 'albumWill') { albumNumber = 0 };
+    if (infoList === 'albumDubs') { albumNumber = 1 };
+    if (infoList === 'albumMatrix') { albumNumber = 2 };
+
+    if (infoLi == parseInt(infoLi)) {changeTrackPlay(albums[albumNumber][infoLi]);}
+    if (infoTime == parseInt(infoTime)) {changeTrackPlay(albums[albumNumber][infoTime]);}
+  
+    function changeTrackPlay(numTrack) {
+      audio.src = dir+numTrack+ext;
+      showNameTrack(numTrack);
+      playSound(audio.src, );
+    }
   }  
 
 
   function showNameTrack(trackName) {
-    trackName = trackName[0].toUpperCase() + trackName.slice(1);
+    trackName = trackName[0].toUpperCase() + trackName.slice(1).replace('_', ' ');
     infoNameTrack.innerText = trackName;
   }
 
 
-  function playSound(track){ 
+  function playSound(track, item){ 
     if(audio.paused == false) {
       audio.pause(track);
 
@@ -75,7 +88,6 @@
       
       audioWrapper.classList.add('audio__wrapper--closed');
       audioWrapper.classList.remove('audio__wrapper--opened');
-
 
     } else {
       audio.play(track);
