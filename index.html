@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Truevers Music</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+		<header class="page-header">
+			<div class="page-header__wrapper">
+				<div class="page-header__block"></div>
+				<a class="page-header__logo">
+					<img class="page-header__logo-image" width="65" height="65" src="img/logotype-truevers.svg" alt="Logo truevers music">
+				</a>	
+				<nav class="main-nav main-nav--closed main-nav--nojs">
+					<button class="main-nav__toggle" type="button"><span class="visually-hidden">Open menu</span></button>
+					<div class="main-nav__wrapper">
+						<ul class="main-nav__list site-list">
+							<li class="site-list__item site-list__item--active">
+								<a>Home</a>
+							</li>
+							<li class="site-list__item">
+								<a href="about.html">About me</a>
+							</li>
+							<li class="site-list__item site-list__album">
+								<a>Albums +</a>
+								<ul class="submenu-list submenu-list__closed">
+            			<li class="submenu-list__item"><a href="album-will.html">Will</a></li>
+           				<li class="submenu-list__item"><a href="album-dust.html">Dust</a></li>
+            			<li class="submenu-list__item"><a href="album-matrix.html">Matrix</a></li>
+        				</ul>
+							</li>
+							<li class="site-list__item">
+								<a href="contacts.html">Contacts</a>
+							</li>
+						</ul>
+						<ul class="main-nav__list social-list">
+							<li class="social-list__item">
+								<a href="#">
+									<svg class="social-list__icon" width="11px" height="20px">
+                		<use xlink:href="img/sprite.svg#icon-facebook"></use>
+                	</svg>
+                </a>
+							</li>
+							<li class="social-list__item ">
+								<a href="about.html">
+									<svg class="social-list__icon" width="26px" height="20px">
+                		<use xlink:href="img/sprite.svg#icon-twitter"></use>
+                	</svg>
+								</a>
+							</li>
+							<li class="social-list__item ">
+								<a href="contacts.html">
+									<svg class="social-list__icon" width="29px" height="24px">
+                		<use xlink:href="img/sprite.svg#icon-youtube-play"></use>
+                	</svg>
+                </a>
+							</li>
+							<li class="social-list__item ">
+								<a href="contacts.html">
+									<svg class="social-list__icon" width="26px" height="26px">
+                		<use xlink:href="img/sprite.svg#icon-telegram"></use>
+                	</svg>
+                </a>
+							</li>	
+						</ul>
+					</div>
+					<div class="main-nav__overlay"></div>
+				</nav>
+			</div>	
+		</header>
+		<main class="page-main">
+			<div class="page-main__wrapper">
+				<aside class="page-main__left-panel">
+					<div class="page-main__left-panel--element"></div>
+				</aside>
+
+				<section class="page-main__content">
+					<div class="page-main__wrapper-content">
+						<h1 class="page-main__title">Hello!<br>I am Truevers.<br> I make music.</h1>
+						<aside class="audio">
+							<button class="audio__button button-play"></button>
+							<div class="audio__wrapper">
+								<input class="audio__seek-slider" type="range" min="0" max="120" value="0" step="1">
+								<div id="timeBox">
+					  			<span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
+								</div>
+								<button class="audio__volume audio__up"></button>
+								<input class="audio__volume-slider" type="range" min="0" max="100" value="100" step="1">
+							</div>
+						</aside>	
+					</div>
+					<picture class="page-main__img">
+						<source media="(min-width: 1200px)" srcset="img/truevers-dekstop.png">
+						<source media="(min-width: 768px)" srcset="img/truevers-laptop.png">
+						<img src="img/truevers-mobile.png" width="528" height="748" alt="">
+					</picture>
+				</section>
+				<section class="page-main__albums">
+					<h2 class="visually-hidden">Albums list</h2>
+					<ul class="albums-list">
+						<li class="albums-item">
+        				<a href="album-will.html"><span>Will</span>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-will.jpg" alt="Album Dust">
+        				</div>
+        				</a>
+						</li>
+						<li class="albums-item">
+        				<a href="album-dust.html"><span>Dust</span>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-dust.jpg" alt="Album Dust">
+        				</div>
+        				</a>
+						</li>
+						<li class="albums-item">
+        				<a href="album-matrix.html"><span>Matrix</span>
+        				<div class="album-item__cover">
+        					<img class="album-item__img" src="img/album-matrix.jpg" alt="Album Dust">
+        				</div>
+        				</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer__wrapper">
+				<a class="page-footer__subscribe" href="#">Subscribe to news</a>
+				<div class="page-footer__copuright">
+					<a href="">Developed web</a>
+				</div>
+			</div>	
+		</footer>
+
+		<section class="modal modal-subscribe">
+      <h2>Subscribe to news</h2>
+      <p class="modal__description">I would like to receive Outotec press releases by e-mail</p>
+      <form class="modal__subscribe-form" action="#" method="post">
+        <p>
+          <label class="modal__input-title indicates">First name</label>
+          <input type="text" required="">
+        </p>
+        <p>
+          <label class="modal__input-title">Last name</label>
+          <input type="text">
+    
+        </p><p>
+          <label class="modal__input-title indicates">E-mail</label>
+          <input type="email" required="" name="e-mail">
+        </p>
+        <p class="modal__indicates">indicates required</p>
+        <button class="button button-subscribe" type="submit">Subscribe</button>
+      </form>
+      <button class="modal__close" type="button">Close</button>
+    </section>
+
+    <div class="modal__overlay"></div>
+
+		<script src="js/main-nav.js"></script>
+		<script src="js/submenu-list.js"></script>
+		<script src="js/subscribe.js"></script>
+		<script src="js/audio.js"></script>
+		
+</body>
+</html>
