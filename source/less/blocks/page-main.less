@@ -29,11 +29,16 @@
 .page-main__title {
 	margin: 0 15px;
 	margin-bottom: 20px;
-	padding-top: 33px;
+	padding-top: 20px;
 	font-size: 36px;
 	font-family: "noto_sansbold", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: bold;
+}
+
+.page-main__title b {
+	margin-left: -5px;
+	font-size: 60px;
 }
 
  @keyframes opacity-title {
@@ -49,7 +54,9 @@
 
 .page-main__title--about {
 	width: 100%;
-	margin-top: 0;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-size: 36px;
 }
 
 .page-main__description--about {
@@ -57,7 +64,9 @@
 }
 
 .page-main__title--contacts {
-	margin-top: 0;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-size: 36px;
 }
 
 .page-main__contacts-list {
@@ -69,7 +78,9 @@
 .page-main__form {
 	display: flex;
 	flex-direction: column;
-	margin: 30px 0;
+	margin: 0;
+	margin-top: 30px;
+	margin-bottom: 51px;
 }
 
 .page-main__form p {
@@ -112,9 +123,6 @@
 	height: auto;
 }
 
-.page-main__contacts {
-	padding-top: 33px;
-}
 
 .page-main__img-contacts img {
  		display: block;
@@ -228,7 +236,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-grow: 1;
-		padding: 0 100px;
+		padding: 0 70px;
 		min-height: 711px;
 
 	}
@@ -242,19 +250,34 @@
 		font-size: 50px;
 	}
 
+	.page-main__title b {
+		margin-left: -5px;
+		font-size: 70px;
+	}
+
+	.page-main__title--contacts {
+		font-size: 36px;
+		margin: 0;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	.page-main__title--about {
+		font-size: 36px;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
 	.page-main__description--about {
 		width: 435px;
 	}
 
 
-	.page-main__img img{
+	.page-main__img img {
 		margin: 0;
-		margin-left: 35px;
-
-		/* margin-bottom: 33px; */
-		width:  334px; //369px;
-		height: 424px; //523px;
-		vertical-align:bottom; /* вот она */
+		margin-left: 55px;
+		width:  390px; 
+		height: auto; 
+		vertical-align:bottom;
 		display:inline-block;
 	}
 
@@ -266,7 +289,8 @@
  		margin-bottom: 27px;
 	} 
 
-	.page-main__contacts {
+	.page-main__contacts,
+	.page-main__about {
   	width: 435px;
   }
 }
@@ -281,6 +305,18 @@
 	.page-main__title {
 		margin-left: 63px;
 		font-size: 60px;
+	}
+
+	.page-main__title b {
+		margin-left: -5px;
+		font-size: 80px;
+	}
+
+	.page-main__title--contacts,
+	.page-main__title--about {
+		font-size: 50px;
+		margin: 0;
+		margin-bottom: 20px;
 	}
 
 	.page-main__wrapper-content {
@@ -347,6 +383,7 @@
 
 	.page-main__contacts {
 		padding: 0;
+		padding-bottom: 155px;
 	}
 
 	.page-main__img-contacts img {
@@ -383,7 +420,8 @@
 		flex-direction: column;
 	}
 
-	.page-main__contacts {
+	.page-main__contacts,
+	.page-main__about {
 		display: flex;
 		flex-direction: column;
 		width: 450px;
