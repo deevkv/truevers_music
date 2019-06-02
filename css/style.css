@@ -1290,6 +1290,10 @@ input[type='range']::-webkit-slider-thumb {
     margin: 0;
     font-size: 45px;
   }
+  .page-main__title b {
+    margin-left: -5px;
+    font-size: 100px;
+  }
   .page-main__img img {
     margin: 0;
     margin-left: 20px;
@@ -1384,7 +1388,7 @@ input[type='range']::-webkit-slider-thumb {
   }
   .page-main__img img {
     margin-top: -62px;
-    margin-left: 125px;
+    margin-left: 105px;
     width: 594px;
     height: auto;
     vertical-align: bottom;
