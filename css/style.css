@@ -1339,6 +1339,10 @@ input[type='range']::-webkit-slider-thumb {
     flex-direction: column;
     width: 450px;
   }
+  .page-main__contacts {
+    padding: 0;
+    padding-bottom: 20px;
+  }
   .page-main__form {
     display: flex;
     flex-direction: column;

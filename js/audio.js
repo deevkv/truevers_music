@@ -48,7 +48,7 @@
     
 
     var albums = [
-      ['dsm', 'will', 'bitter', 'stars'], 
+      ['dsm', 'will', 'bitter'], 
       ['robot', 'revolver', 'breaking_bad', 'war'], 
       ['matrix', 'second_birth', 'dead']
     ];  
