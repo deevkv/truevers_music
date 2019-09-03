@@ -97,12 +97,15 @@
     
 }
 
+.
+
 @media(max-width: @mobile-width-only) {
 	.main-nav--closed .main-nav__wrapper {
 		position: absolute;
 		top: -650px;
 		right: 0;
 		left: 0;
+		z-index: -1;
 		transition: top .4s, transform .6s;
 	}
 
